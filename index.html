@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Небольшие и полезные приложения Kapfilm для macOS.">
+    <meta name="theme-color" content="#f4f5f7">
+    <meta property="og:title" content="Kapfilm — приложения для macOS">
+    <meta property="og:description" content="Небольшие и полезные приложения для Mac.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kapfilm.github.io/">
+    <meta property="og:image" content="https://kapfilm.github.io/assets/images/airbridge-icon.png">
+    <title>Kapfilm — приложения для macOS</title>
+    <link rel="icon" href="assets/images/airbridge-icon.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script>
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) document.documentElement.dataset.theme = savedTheme;
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Kapfilm, на главную">
+        <span class="brand-mark">K</span>
+        <span>Kapfilm</span>
+      </a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#apps">Программы</a>
+        <a href="#about">О проекте</a>
+        <a href="https://github.com/Kapfilm" target="_blank" rel="noreferrer">GitHub</a>
+        <button class="theme-toggle" type="button" aria-label="Переключить тему">
+          <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+          <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 15.4A9 9 0 0 1 8.6 3.5 9 9 0 1 0 20.5 15.4Z"/></svg>
+        </button>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-glow hero-glow-one"></div>
+        <div class="hero-glow hero-glow-two"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Независимый разработчик · macOS</p>
+          <h1>Полезные программы.<br><span>Созданы для Mac.</span></h1>
+          <p class="hero-copy">Простые приложения, которые решают конкретные задачи и не мешают работать.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#airbridge">Смотреть программы</a>
+            <a class="button button-secondary" href="https://github.com/Kapfilm" target="_blank" rel="noreferrer">Профиль GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="window window-back">
+            <div class="window-bar"><i></i><i></i><i></i></div>
+          </div>
+          <div class="window window-front">
+            <div class="window-bar"><i></i><i></i><i></i><span>AirBridge</span></div>
+            <div class="window-content">
+              <img src="assets/images/airbridge-icon.png" alt="">
+              <div class="transfer-line"><span></span></div>
+              <div class="device device-mac"><b>Mac</b><small>Подключён</small></div>
+              <div class="device device-phone"><b>Android</b><small>Готов</small></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="apps-section" id="apps" aria-labelledby="apps-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Программы</p>
+            <h2 id="apps-title">Сделано с вниманием к деталям.</h2>
+          </div>
+          <p>Коллекция будет постепенно пополняться новыми приложениями.</p>
+        </div>
+
+        <article class="app-card" id="airbridge">
+          <div class="app-card-main">
+            <img class="app-icon" src="assets/images/airbridge-icon.png" alt="Иконка AirBridge" width="512" height="512">
+            <div class="app-info">
+              <div class="app-title-row">
+                <h3>AirBridge</h3>
+                <span class="version">1.3.4</span>
+              </div>
+              <p class="app-tagline">Передавайте файлы между Mac и Android напрямую — без облака и лишних аккаунтов.</p>
+              <div class="app-meta">
+                <span>macOS 14+</span>
+                <span>Apple Silicon + Intel</span>
+                <span>Android</span>
+              </div>
+              <div class="app-actions">
+                <a class="button button-primary" href="https://github.com/Kapfilm/AirBridge-Releases/releases/latest" target="_blank" rel="noreferrer">Скачать последнюю версию</a>
+                <a class="text-link" href="https://github.com/Kapfilm/AirBridge-Releases" target="_blank" rel="noreferrer">Все версии <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-grid">
+            <div class="feature">
+              <span class="feature-symbol">⇄</span>
+              <h4>В обе стороны</h4>
+              <p>Отправляйте файлы, папки, текст и ссылки между устройствами.</p>
+            </div>
+            <div class="feature">
+              <span class="feature-symbol">⌁</span>
+              <h4>Без облака</h4>
+              <p>Передача идёт напрямую внутри вашей локальной Wi‑Fi сети.</p>
+            </div>
+            <div class="feature">
+              <span class="feature-symbol">✓</span>
+              <h4>С шифрованием</h4>
+              <p>AES‑256‑GCM, защищённое сопряжение и проверка целостности.</p>
+            </div>
+          </div>
+        </article>
+
+        <div class="coming-soon">
+          <div class="coming-icon">+</div>
+          <div>
+            <h3>Следующая программа уже в пути</h3>
+            <p>Здесь появятся новые приложения Kapfilm для macOS.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section" id="about">
+        <p class="eyebrow">О проекте</p>
+        <h2>Меньше шума.<br>Больше пользы.</h2>
+        <p>Я создаю небольшие программы для повседневных задач на Mac. У каждого приложения — понятная цель, нативный интерфейс и минимум лишнего.</p>
+        <a class="text-link" href="https://github.com/Kapfilm" target="_blank" rel="noreferrer">Посмотреть проекты на GitHub <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="brand" href="#top"><span class="brand-mark">K</span><span>Kapfilm</span></a>
+      <p>© <span id="year"></span> Kapfilm. Сделано для macOS.</p>
+      <a href="https://github.com/Kapfilm" target="_blank" rel="noreferrer">GitHub</a>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
