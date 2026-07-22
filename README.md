@@ -7,7 +7,8 @@
 Сейчас на сайте представлены:
 
 - AirBridge;
-- WallpaperScheduler.
+- WallpaperScheduler;
+- Библия.
 
 Сайт также содержит добровольную ссылку поддержки через ЮMoney.
 
