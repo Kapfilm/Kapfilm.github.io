@@ -287,6 +287,47 @@ h1 span {
   color: #9255b7;
 }
 
+.touchpilot-card .app-icon {
+  filter: drop-shadow(0 22px 28px rgba(255, 111, 99, .24));
+}
+
+.touchpilot-card .feature-symbol {
+  background: rgba(255, 111, 99, .12);
+  color: #ec675c;
+}
+
+.touchpilot-screenshots img {
+  height: 330px;
+}
+
+.touchpilot-notes {
+  display: grid;
+  padding: 32px 34px;
+  border-top: 1px solid var(--line);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.touchpilot-notes > div {
+  display: flex;
+  min-height: 116px;
+  padding: 22px;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(127, 127, 135, .06);
+}
+
+.touchpilot-notes strong {
+  font-size: 15px;
+}
+
+.touchpilot-notes span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
 .feature-grid { display: grid; border-top: 1px solid var(--line); grid-template-columns: repeat(3, 1fr); }
 .feature { min-height: 205px; padding: 34px; border-right: 1px solid var(--line); }
 .feature:last-child { border-right: 0; }
@@ -418,6 +459,8 @@ h1 span {
   .install-note { margin-right: auto; margin-left: auto; }
   .app-screenshots { padding: 0 16px 24px; grid-template-columns: 1fr; }
   .app-screenshots img { height: auto; max-height: 420px; object-fit: contain; }
+  .touchpilot-notes { padding: 0 16px 24px; grid-template-columns: 1fr; }
+  .touchpilot-notes > div { min-height: auto; }
   .feature-grid { grid-template-columns: 1fr; }
   .feature { min-height: auto; padding: 28px; border-right: 0; border-bottom: 1px solid var(--line); }
   .feature:last-child { border-bottom: 0; }
