@@ -72,6 +72,7 @@ a { color: inherit; }
 }
 
 .brand {
+  --brand-burgundy: #8f2441;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -102,19 +103,21 @@ a { color: inherit; }
 .brand-k {
   z-index: 2;
   color: #fff;
-  font-size: 19px;
-  font-weight: 760;
+  font-size: 18px;
+  font-weight: 700;
   letter-spacing: -.05em;
-  transform: translate(-62%, -58%);
+  transform: translate(calc(-50% - 3px), calc(-50% - 1px));
 }
 
 .brand-f {
   z-index: 1;
-  color: #a92f52;
-  font-size: 24px;
+  color: var(--brand-burgundy);
+  font-size: 22px;
   font-weight: 850;
-  transform: translate(-24%, -32%);
+  transform: translate(calc(-50% + 5px), calc(-50% + 4px));
 }
+
+.brand-name-f { color: var(--brand-burgundy); }
 
 .nav { display: flex; align-items: center; gap: 28px; }
 .nav a { color: var(--muted); font-size: 14px; text-decoration: none; transition: color .2s ease; }
