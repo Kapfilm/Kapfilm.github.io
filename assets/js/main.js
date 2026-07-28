@@ -13,6 +13,67 @@ themeToggle.addEventListener("click", () => {
 
 document.querySelector("#year").textContent = new Date().getFullYear();
 
+const heroCarousel = document.querySelector(".hero-visual");
+const heroSlides = [...document.querySelectorAll(".hero-slide")];
+const carouselDots = [...document.querySelectorAll(".carousel-dot")];
+const carouselTitle = document.querySelector(".carousel-title");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+let activeSlide = 0;
+let carouselTimer;
+
+function showHeroSlide(index) {
+  activeSlide = (index + heroSlides.length) % heroSlides.length;
+
+  heroSlides.forEach((slide, slideIndex) => {
+    const isActive = slideIndex === activeSlide;
+    slide.classList.toggle("is-active", isActive);
+    slide.setAttribute("aria-hidden", String(!isActive));
+    slide.tabIndex = isActive ? 0 : -1;
+  });
+
+  carouselDots.forEach((dot, dotIndex) => {
+    const isActive = dotIndex === activeSlide;
+    dot.classList.toggle("is-active", isActive);
+    dot.setAttribute("aria-pressed", String(isActive));
+  });
+
+  carouselTitle.textContent = heroSlides[activeSlide].dataset.title;
+}
+
+function stopHeroCarousel() {
+  window.clearInterval(carouselTimer);
+}
+
+function startHeroCarousel() {
+  stopHeroCarousel();
+  if (!reduceMotion.matches) {
+    carouselTimer = window.setInterval(() => showHeroSlide(activeSlide + 1), 4500);
+  }
+}
+
+carouselDots.forEach((dot) => {
+  dot.addEventListener("click", () => {
+    showHeroSlide(Number(dot.dataset.slide));
+    startHeroCarousel();
+  });
+});
+
+heroCarousel.addEventListener("mouseenter", stopHeroCarousel);
+heroCarousel.addEventListener("mouseleave", startHeroCarousel);
+heroCarousel.addEventListener("focusin", stopHeroCarousel);
+heroCarousel.addEventListener("focusout", (event) => {
+  if (!heroCarousel.contains(event.relatedTarget)) startHeroCarousel();
+});
+reduceMotion.addEventListener("change", startHeroCarousel);
+startHeroCarousel();
+
+document.querySelectorAll(".screenshot-disclosure").forEach((details) => {
+  const label = details.querySelector("summary > span:first-child");
+  details.addEventListener("toggle", () => {
+    label.textContent = details.open ? "Скрыть скриншоты" : "Показать скриншоты";
+  });
+});
+
 const latestReleaseRequests = new Map();
 
 function latestReleaseAsset(repository, extension) {

@@ -49,22 +49,44 @@
           <h1>Полезные программы.<br><span>Созданы для Mac.</span></h1>
           <p class="hero-copy">Простые приложения, которые решают конкретные задачи и не мешают работать.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#airbridge">Смотреть программы</a>
+            <a class="button button-primary" href="#apps">Смотреть программы</a>
             <a class="button button-secondary" href="https://github.com/Kapfilm" target="_blank" rel="noreferrer">Профиль GitHub <span aria-hidden="true">↗</span></a>
           </div>
         </div>
 
-        <div class="hero-visual" aria-hidden="true">
+        <div class="hero-visual" aria-label="Карусель программ Kapfilm">
           <div class="window window-back">
             <div class="window-bar"><i></i><i></i><i></i></div>
           </div>
           <div class="window window-front">
-            <div class="window-bar"><i></i><i></i><i></i><span>AirBridge</span></div>
+            <div class="window-bar"><i></i><i></i><i></i><span class="carousel-title">AirBridge</span></div>
             <div class="window-content">
-              <img src="assets/images/airbridge-icon.png" alt="">
-              <div class="transfer-line"><span></span></div>
-              <div class="device device-mac"><b>Mac</b><small>Подключён</small></div>
-              <div class="device device-phone"><b>Android</b><small>Готов</small></div>
+              <a class="hero-slide is-active" href="#airbridge" data-title="AirBridge" aria-label="Перейти к AirBridge">
+                <img src="assets/images/airbridge-icon.png" alt="">
+                <strong>Файлы между Mac и Android</strong>
+                <span>Быстро · Напрямую · Без облака</span>
+              </a>
+              <a class="hero-slide" href="#wallpaper-scheduler" data-title="WallpaperScheduler" aria-label="Перейти к WallpaperScheduler" aria-hidden="true" tabindex="-1">
+                <img src="assets/images/wallpaper-scheduler-icon.png" alt="">
+                <strong>Обои по вашему расписанию</strong>
+                <span>2, 4 или 8 периодов · Menu Bar</span>
+              </a>
+              <a class="hero-slide" href="#bible-reader" data-title="Библия" aria-label="Перейти к приложению Библия" aria-hidden="true" tabindex="-1">
+                <img src="assets/images/bible-reader-icon.png" alt="">
+                <strong>Чтение и толкования рядом</strong>
+                <span>Переводы · Поиск · Темы оформления</span>
+              </a>
+              <a class="hero-slide" href="#touchpilot" data-title="TouchPilot" aria-label="Перейти к TouchPilot" aria-hidden="true" tabindex="-1">
+                <img src="assets/images/touchpilot-icon.png" alt="">
+                <strong>Управляйте Mac жестами</strong>
+                <span>Трекпад · Команды · Автоматизация</span>
+              </a>
+              <div class="carousel-controls" aria-label="Выбрать программу">
+                <button class="carousel-dot is-active" type="button" data-slide="0" aria-label="Показать AirBridge" aria-pressed="true"></button>
+                <button class="carousel-dot" type="button" data-slide="1" aria-label="Показать WallpaperScheduler" aria-pressed="false"></button>
+                <button class="carousel-dot" type="button" data-slide="2" aria-label="Показать приложение Библия" aria-pressed="false"></button>
+                <button class="carousel-dot" type="button" data-slide="3" aria-label="Показать TouchPilot" aria-pressed="false"></button>
+              </div>
             </div>
           </div>
         </div>
@@ -142,16 +164,19 @@
             </div>
           </div>
 
-          <div class="app-screenshots" aria-label="Скриншоты WallpaperScheduler">
-            <figure>
-              <img src="assets/images/wallpaper-scheduler-settings.png" alt="Настройка четырёх периодов суток в WallpaperScheduler" width="1100" height="969" loading="lazy">
-              <figcaption>Обои для каждого периода</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/images/wallpaper-scheduler-schedule.png" alt="Редактор расписания WallpaperScheduler" width="1100" height="982" loading="lazy">
-              <figcaption>Гибкое расписание</figcaption>
-            </figure>
-          </div>
+          <details class="screenshot-disclosure">
+            <summary><span>Показать скриншоты</span><span class="disclosure-count">2</span></summary>
+            <div class="app-screenshots" aria-label="Скриншоты WallpaperScheduler">
+              <figure>
+                <img src="assets/images/wallpaper-scheduler-settings.png" alt="Настройка четырёх периодов суток в WallpaperScheduler" width="1100" height="969" loading="lazy">
+                <figcaption>Обои для каждого периода</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/images/wallpaper-scheduler-schedule.png" alt="Редактор расписания WallpaperScheduler" width="1100" height="982" loading="lazy">
+                <figcaption>Гибкое расписание</figcaption>
+              </figure>
+            </div>
+          </details>
 
           <div class="feature-grid">
             <div class="feature">
@@ -196,20 +221,23 @@
             </div>
           </div>
 
-          <div class="app-screenshots" aria-label="Скриншоты приложения Библия">
-            <figure>
-              <img src="assets/images/bible-reader-light.jpg" alt="Чтение книги Бытие в светлой теме" width="1800" height="1420" loading="lazy">
-              <figcaption>Удобное чтение</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/images/bible-reader-codex.jpg" alt="Чтение Библии в тёмной теме Codex" width="1800" height="1427" loading="lazy">
-              <figcaption>Светлые и тёмные темы</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/images/bible-reader-commentary.jpg" alt="Окно толкований Святых Отцов" width="1800" height="1428" loading="lazy">
-              <figcaption>Толкования Святых Отцов</figcaption>
-            </figure>
-          </div>
+          <details class="screenshot-disclosure">
+            <summary><span>Показать скриншоты</span><span class="disclosure-count">3</span></summary>
+            <div class="app-screenshots" aria-label="Скриншоты приложения Библия">
+              <figure>
+                <img src="assets/images/bible-reader-light.jpg" alt="Чтение книги Бытие в светлой теме" width="1800" height="1420" loading="lazy">
+                <figcaption>Удобное чтение</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/images/bible-reader-codex.jpg" alt="Чтение Библии в тёмной теме Codex" width="1800" height="1427" loading="lazy">
+                <figcaption>Светлые и тёмные темы</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/images/bible-reader-commentary.jpg" alt="Окно толкований Святых Отцов" width="1800" height="1428" loading="lazy">
+                <figcaption>Толкования Святых Отцов</figcaption>
+              </figure>
+            </div>
+          </details>
 
           <div class="feature-grid">
             <div class="feature">
@@ -253,24 +281,27 @@
             </div>
           </div>
 
-          <div class="app-screenshots touchpilot-screenshots" aria-label="Скриншоты TouchPilot">
-            <figure>
-              <img src="assets/images/touchpilot-main-light.png" alt="Главное окно TouchPilot в светлой теме со списком жестов и действий" width="1400" height="960" loading="lazy">
-              <figcaption>Профили, жесты и цепочки действий</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/images/touchpilot-gesture-editor.png" alt="Редактор жестов TouchPilot с выбором TipTap" width="1400" height="961" loading="lazy">
-              <figcaption>Гибкая настройка жестов</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/images/touchpilot-main-dark.png" alt="Главное окно TouchPilot в тёмной теме" width="1400" height="969" loading="lazy">
-              <figcaption>Светлая и тёмная темы</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/images/touchpilot-tutorial.png" alt="Интерактивное знакомство с возможностями TouchPilot" width="1400" height="961" loading="lazy">
-              <figcaption>Встроенное знакомство с приложением</figcaption>
-            </figure>
-          </div>
+          <details class="screenshot-disclosure">
+            <summary><span>Показать скриншоты</span><span class="disclosure-count">4</span></summary>
+            <div class="app-screenshots touchpilot-screenshots" aria-label="Скриншоты TouchPilot">
+              <figure>
+                <img src="assets/images/touchpilot-main-light.png" alt="Главное окно TouchPilot в светлой теме со списком жестов и действий" width="1400" height="960" loading="lazy">
+                <figcaption>Профили, жесты и цепочки действий</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/images/touchpilot-gesture-editor.png" alt="Редактор жестов TouchPilot с выбором TipTap" width="1400" height="961" loading="lazy">
+                <figcaption>Гибкая настройка жестов</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/images/touchpilot-main-dark.png" alt="Главное окно TouchPilot в тёмной теме" width="1400" height="969" loading="lazy">
+                <figcaption>Светлая и тёмная темы</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/images/touchpilot-tutorial.png" alt="Интерактивное знакомство с возможностями TouchPilot" width="1400" height="961" loading="lazy">
+                <figcaption>Встроенное знакомство с приложением</figcaption>
+              </figure>
+            </div>
+          </details>
 
           <div class="feature-grid">
             <div class="feature">
